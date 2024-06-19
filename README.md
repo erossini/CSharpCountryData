@@ -332,3 +332,30 @@ In Windows, you see the short name of the country. In iOS and Android, the flag 
 | ZM  | 🇿🇲  | U+1F1FF U+1F1F2 | Zambia                                       |
 | ZW  | 🇿🇼  | U+1F1FF U+1F1FC | Zimbabwe                                     |
 
+## Functions
+
+| Function               | Return               | Description                                                 |
+|------------------------|----------------------|-------------------------------------------------------------|
+| GetCountries()         | IEnumerable<string>  | Gets the list of all countries in the world                 |
+| GetCountryByCode       | Country              | Returns a single Country Data by ShortCode                  |
+| GetCountryData()       | IEnumerable<Country> | Gets the list of all countries in the world with their data |
+| GetCountryEmojiFlag    | string               | Returns the Emoji Flag of a country by ShortCode            |
+| GetRegionByCountryCode | List<Regions>        | Returns the Regions of a country by ShortCode               |
+| GetJsonData            | string               | Returns the JSON Data of all countries in the world         |
+
+### Flags
+
+| Function               | Return               | Description                                                 |
+|------------------------|----------------------|-------------------------------------------------------------|
+| GetFlagByCountryCode   | string               | Returns the Flag of a country by ShortCode                  |
+| GetFlagData            | FlagModel            | Return the `FlagModel` of one country by ShortCode          |
+| GetNameByCountryCode   | string               | Returns the Name of a country by ShortCode                  |
+
+### Get a full SVG
+
+The `GetFlagByCountryCode` returns only the content of the SVG file. What it doesn't have is the `XML` declaration and the `DOCTYPE` declaration. 
+If you want to get the full SVG file, you can use the `GetFullSVG` function in the `SVGFlags` static class.
+
+```csharp
+var svgFlag = SVGFlags.GetFullSVG(SVGFlags.lgbt_1, "300", "300");
+```
