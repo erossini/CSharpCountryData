@@ -3,17 +3,21 @@ A simple cross-platform offline .NET library for getting country data. Based on 
 
 ## Install Library
 
-### Package Manager
+To install the library in your project, open the *Package Manager* and type the following command:
+
 ```cSharp
 Install-Package PSC.CSharp.CountryData
 ```
 
-##### .NET CLI
+Also, you can use the .NET CLI to install the library. Type the following command:
+
 ```cSharp
 dotnet add package PSC.CSharp.CountryData
 ```
 
 ## Usage
+
+Here is an example how to use the library in your project.
 
 ### Initialize the CountryData
 
@@ -23,8 +27,8 @@ var countryHelper = new CountryHelper();
 ```
 
 ### Get the list of countries 
+
 ```cSharp
-var countries = countryHelper.GetCountries();
 foreach (var country in countries) 
     Console.WriteLine(country);
 ```
@@ -32,7 +36,7 @@ foreach (var country in countries)
 ### Get the list of regions in a country by country code
 
 ```cSharp
-var regions = countryHelper.GetRegionByCountryCode("GH");
+var regions = countryHelper.GetRegionByCountryCode("IT");
 foreach (var region in regions)
     Console.WriteLine(region.Name);
 ```
@@ -45,7 +49,7 @@ foreach (var region in regions)
 var data = countryHelper.GetCountryData();
 ```
 
-Get the list of countries by their Names
+### Get the list of countries by their Names
 
 This code displays the name of the countries using a `foreach`.
 
@@ -63,9 +67,18 @@ data.Where(x => x.CountryShortCode == "US")
     .ToList();
 ```
 
+### Get the flag for a country
+
+In the library, I added a method to get the flag of a country. The flags are in SVG format. The type of the flag can be `Square` or `Wide`.
+
+```cSharp
+var flag = helper.GetFlagByCountryCode("GB", FlagType.Square);
+```
+
 ## List of supported ISO-3166-1 country codes
 
-Here is the list of supported ISO-3166-1 country codes, their codepoint pairs and Emoji Flags. Based on the operating system, you see different _Emoji_. In Windows, you see the short name of the country. In iOS and Android, the flag of the correspondent country is displayed.
+Here is the list of supported ISO-3166-1 country codes, their code point pairs and `Emoji` flags. Based on the operating system, you see different _Emoji_.
+In Windows, you see the short name of the country. In iOS and Android, the flag of the correspondent country is displayed.
 
 | ISO | Emoji | Unicode         | Name                                         |
 |-----|-------|-----------------|----------------------------------------------|
