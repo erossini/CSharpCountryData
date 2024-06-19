@@ -1,6 +1,6 @@
 # Country Data library for NET8
 A simple cross-platform offline .NET library for getting country data. The library is based on the ISO-3166-1 standard.
-Based on the operating system, using *Unicode**, you can display the flag of the country. On Windows, the _emoji_ displays the shortcode of the country, not the flag.
+Based on the operating system, using *Unicode*, you can display the flag of the country. On Windows, the _emoji_ displays the shortcode of the country, not the flag.
 
 The library has the flags of the countries in SVG format. The flags can be displayed in two different types: `Square` and `Wide`.
 
