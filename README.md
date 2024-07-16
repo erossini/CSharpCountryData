@@ -1,4 +1,7 @@
 # Country Data library for NET8
+
+![countrydata_library](https://github.com/erossini/CSharpCountryData/assets/9497415/27b1d1ed-bc87-4d49-a7fd-89eaf1d0304b)
+
 A simple cross-platform offline .NET library for getting country data. The library is based on the ISO-3166-1 standard.
 Based on the operating system, using *Unicode*, you can display the flag of the country. On Windows, the _emoji_ displays the shortcode of the country, not the flag.
 
